@@ -1,0 +1,111 @@
+	<html>
+
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144376239-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-144376239-2');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="This is web based NFA to DFA converter. You need to input the NFA transition table and you will get the DFA transition table as output.">
+	<meta name="author" content="Rishabh Rathi">
+	<meta property="og:url" content="http://www.rishabhrathi.co" />
+	<meta property="og:title" content="NFA to DFA Converter" />
+
+	<link rel="icon" href="favicon.png" type="image/png">
+
+
+	<title> NFA to DFA Converter </title> 
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script type="text/javascript" src="nfatodfa.js"></script>
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color: #f2f7f8">
+
+	<div class="topnav">
+		<a onClick="window.location.reload()">Home</a>
+		<a onClick="showAbout()" style="float: right;">About</a>
+		<!-- <a onClick="showContact()">Contact</a> -->
+	</div>
+	<br>
+	<h1 id="heading" style="font-size: 40px; text-align: center; font-weight: bold;">NFA to DFA Converter</h1>
+	<br>
+
+	<div id="inputSection2">
+		<h2>Input NFA </h2><br>
+
+		<table align="center">
+			<tr>
+				<td><label for="nStates">Enter No. of States </label></td>	
+				<td><input type="text" id="nStates"></td>
+			</tr>	
+
+			<tr>
+				<td><label for="nInput">Enter No. of Input Symbol </label></td>
+				<td><input type="text" id="nInput"></td>
+			</tr>
+
+			<tr>
+				<td><label for="fState">Enter Final state(s) </label></td>
+				<td><input type="text" id="fState"></td>
+			</tr>
+		</table>
+		<font>[Enter number for state (Ex 2 for q2) <br>
+		If multiple final states - Separate by comma(,)]</font>
+		<br><br>
+		<input type="submit" name="submit" id="submit" onclick="getInput()" value="Continue">
+
+	</div>
+
+	<div id="inputSection">
+
+		<div id="inputSymbols"></div><br>
+		<div id="statesInput"></div><br>
+		
+		<input type="submit" name="Convert" id="convert" value="Convert" style="display: none;" onclick="passInput()">
+	
+	</div>
+
+	<div id="answer" style="text-align: center;">
+		<div id="inputTransTable" style="font-weight: bold; font-size: 30px;">NFA</div>
+		<div id="outputTransTable" style="font-weight: bold; font-size: 30px;">DFA</div>
+		<div id="inputTransTable"></div>
+		<div id="outputTransTable"></div>
+		<div id="finalStates"></div>
+	</div>
+
+	<div id="about"></div>
+
+	<div id="contact"></div>
+
+	<!-- Footer -->
+	<footer>
+
+		<span style="float: left;">© 2020 Copyright:
+			<a href="http://rishabhrathi.co/" target="_blank"> Rishabhrathi.co</a>
+		</span>
+		<span style="float: right;">
+			<a href="http://www.rishabhrathi.co" class="fa fa-user" target="_blank"></a>
+			<a href="https://www.facebook.com/rishabh.rathi.5661" class="fa fa-facebook" target="_blank"></a>
+			<a href="https://twitter.com/rishabhrathi000" class="fa fa-twitter" target="_blank"></a>
+			<a href="https://www.linkedin.com/in/rishabhrathi22" class="fa fa-linkedin" target="_blank"></a>
+			<a href="https://www.instagram.com/rishabhrathi22/" class="fa fa-instagram" target="_blank"></a>
+			<a href="https://github.com/rishabhrathi22" class="fa fa-github" target="_blank"></a>
+		</span>
+
+	</footer>
+	<!-- Footer -->
+	
+</body>
+
+</html>
